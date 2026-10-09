@@ -28,9 +28,9 @@ hero:
     - src: /hero/random-9.avif
       alt: Random Image 9
 about:
-  title: "About Me"
+  title: "About"
   description: |
-    I'm a developer with a wide range of capabilities across backend, frontend, and mobile development, currently focused on backend engineering.
+    I'm a Indonesian (Wonosobo) based developer with a wide range of capabilities across backend, frontend, and mobile development, currently focused on backend engineering.
     I enjoy turning real-world requirements and complex data into precise, integrated, and useful applications. For me, building software is not simply about writing code - it's about understanding how data flows, how systems connect, and how each part works together to solve a problem.
     My experience across different areas of development gives me a broader perspective when building backend systems. I can understand what happens beyond the backend, while keeping my focus on creating reliable data, solid logic, and well-integrated systems behind the application.
     I believe good software should not only work, but should make sense - to the data, to the system, and ultimately to the people who use it.

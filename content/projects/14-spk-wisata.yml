@@ -1,0 +1,8 @@
+title: "SPK Wisata"
+year: "2018"
+workplace: "Freelance"
+description: "An intelligent decision support system to determine the best locations for Taekwondo training."
+technologies:
+  - "PHP"
+  - "CodeIgniter"
+  - "Vue.js"

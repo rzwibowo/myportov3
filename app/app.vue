@@ -10,7 +10,7 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' }
   ],
   htmlAttrs: {
     lang: 'en'
@@ -59,3 +59,9 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     </ClientOnly>
   </UApp>
 </template>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

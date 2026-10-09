@@ -1,0 +1,7 @@
+title: "Logbook Keperawatan"
+year: "2020"
+workplace: "Rumah Sakit Islam Wonosobo"
+description: "Streamlined nursing activity logging to be more organized than traditional thick logbooks; sessions were strictly tied to shifts to prevent retroactive entries."
+technologies:
+  - "Node.js"
+  - "Vue.js"

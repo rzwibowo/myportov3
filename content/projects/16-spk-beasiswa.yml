@@ -1,0 +1,8 @@
+title: "SPK Beasiswa"
+year: "2018"
+workplace: "Freelance"
+description: "A decision support system designed to help determine scholarship eligibility."
+technologies:
+  - "PHP"
+  - "CodeIgniter"
+  - "Vue.js"

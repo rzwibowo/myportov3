@@ -1,0 +1,9 @@
+title: "sheerat-iDRG"
+highlight: true
+year: "2026"
+workplace: "Rumah Sakit Islam Wonosobo"
+description: "Developed a bridge between the hospital's SIMRS (Management Information System) and E-Klaim iDRG. This integration streamlines BPJS claims management by directly syncing data between the hospital's local system and the national E-Klaim service."
+technologies:
+  - "PHP"
+  - "Laravel"
+image: "/projects/sheerat-idrg.jpeg"

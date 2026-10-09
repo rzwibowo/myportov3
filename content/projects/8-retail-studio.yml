@@ -1,0 +1,7 @@
+title: "Retail Studio Mobile App"
+year: "2021"
+workplace: "Bos Ampuh"
+description: "An application for managing sales orders, from selecting items to generating actionable orders processed directly on the web platform."
+technologies:
+  - "Flutter"
+  - "Dart"

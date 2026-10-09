@@ -1,0 +1,7 @@
+title: "Sepatu Jogja Attendance App"
+year: "2022"
+workplace: "Sepatu Yogyakarta"
+description: "Enabled attendance tracking strictly when connected to the office Wi-Fi, effectively eliminating buddy punching."
+technologies:
+  - "Flutter"
+  - "Dart"

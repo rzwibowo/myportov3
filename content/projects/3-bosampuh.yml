@@ -1,0 +1,12 @@
+title: "Bosampuh"
+highlight: true
+year: "2025"
+workplace: "Bos Ampuh"
+description: "Engineered a queuing system for batch uploading shipment data to the Pos Indonesia API. Currently developing an inventory management system alongside a mobile application version of the web platform."
+technologies:
+  - "PHP"
+  - "CodeIgniter"
+  - "Redis"
+  - "Flutter"
+  - "Dart"
+image: "/projects/bosampuh.jpeg"

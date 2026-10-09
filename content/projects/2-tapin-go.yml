@@ -1,0 +1,11 @@
+title: "Tapin Go"
+highlight: true
+year: "2026"
+workplace: "Rumah Sakit Islam Wonosobo"
+description: "A self-hosted and custom-developed mobile attendance application utilizing beacon technology for accurate, location-based employee tracking."
+technologies:
+  - "Flutter"
+  - "Dart"
+  - "PHP"
+  - "Laravel"
+image: "/projects/tapin-go.jpeg"

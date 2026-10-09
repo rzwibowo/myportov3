@@ -1,0 +1,10 @@
+title: "My Moments"
+highlight: true
+year: "2026"
+workplace: "Freelance"
+description: "Developed a self-service kiosk system, building the user interface and implementing a seamless direct printing process from the web application to physical printing machines."
+technologies:
+  - "PHP"
+  - "CodeIgniter"
+  - "Java"
+image: "/projects/my-moments.jpg"

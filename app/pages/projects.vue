@@ -14,6 +14,11 @@ const { data: projects } = await useAsyncData('projects', () => {
   return queryCollection('projects').all()
 })
 
+const sortedProjects = computed(() => {
+  if (!projects.value) return []
+  return projects.value.slice().sort((a, b) => parseInt(b.year) - parseInt(a.year))
+})
+
 const { global } = useAppConfig()
 
 const title = page.value?.seo?.title || page.value?.title
@@ -31,82 +36,79 @@ defineOgImage('Portfolio', { title, description })
 
 <template>
   <UPage v-if="page">
-    <UPageHero
-      :title="page.title"
-      :description="page.description"
-      :links="page.links"
-      :ui="{
-        title: 'mx-0! text-left',
-        description: 'mx-0! text-left',
-        links: 'justify-start'
-      }"
-    >
-      <template #links>
-        <div
-          v-if="page.links"
-          class="flex items-center gap-2"
-        >
-          <UButton
-            :label="page.links[0]?.label"
-            :to="global.meetingLink"
-            v-bind="page.links[0]"
-          />
-          <UButton
-            :to="`mailto:${global.email}`"
-            v-bind="page.links[1]"
-          />
-        </div>
-      </template>
-    </UPageHero>
+    <div class="pt-12 pb-8">
+      <UButton
+        to="/"
+        color="primary"
+        variant="ghost"
+        icon="i-lucide-arrow-left"
+        class="-ml-2 mb-6 font-semibold transition-transform hover:-translate-x-1"
+      >
+        Rizki A. Wibowo
+      </UButton>
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+        All Projects
+      </h1>
+    </div>
     <UPageSection
       :ui="{
         container: 'pt-0!'
       }"
     >
-      <Motion
-        v-for="(project, index) in projects"
-        :key="project.title"
-        :initial="{ opacity: 0, transform: 'translateY(10px)' }"
-        :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
-        :transition="{ delay: 0.2 * index }"
-        :in-view-options="{ once: true }"
-      >
-        <UPageCard
-          :title="project.title"
-          :description="project.description"
-          :to="project.url"
-          orientation="horizontal"
-          variant="naked"
-          :reverse="index % 2 === 1"
-          class="group"
-          :ui="{
-            wrapper: 'max-sm:order-last'
-          }"
-        >
-          <template #leading>
-            <span class="text-sm text-muted">
-              {{ new Date(project.date).getFullYear() }}
-            </span>
-          </template>
-          <template #footer>
-            <ULink
-              :to="project.url"
-              class="text-sm text-primary flex items-center"
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-800 text-sm text-gray-500 dark:text-gray-400">
+              <th class="py-4 pr-4 sm:pr-8 font-semibold w-24">Year</th>
+              <th class="py-4 pr-4 sm:pr-8 font-semibold">Project</th>
+              <th class="py-4 pr-4 sm:pr-8 font-semibold hidden md:table-cell">Made at</th>
+              <th class="py-4 font-semibold hidden lg:table-cell">Built with</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr 
+              v-for="project in sortedProjects" 
+              :key="project.title" 
+              class="border-b border-gray-100 dark:border-gray-800/50 hover:bg-gray-50/50 dark:hover:bg-white/[0.02] transition-colors"
             >
-              View Project
-              <UIcon
-                name="i-lucide-arrow-right"
-                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-              />
-            </ULink>
-          </template>
-          <img
-            :src="project.image"
-            :alt="project.title"
-            class="object-cover w-full h-48 rounded-lg"
-          >
-        </UPageCard>
-      </Motion>
+              <td class="py-4 pr-4 sm:pr-8 text-sm text-muted align-top">{{ project.year }}</td>
+              <td class="py-4 pr-4 sm:pr-8 align-top">
+                <div class="font-bold text-gray-900 dark:text-gray-100">{{ project.title }}</div>
+                
+                <div class="md:hidden mt-1 text-xs font-medium text-primary">
+                  {{ project.workplace }}
+                </div>
+                
+                <div class="text-sm text-muted mt-2 leading-relaxed">
+                  {{ project.description }}
+                </div>
+
+                <div class="lg:hidden flex flex-wrap gap-1.5 mt-3">
+                  <span 
+                    v-for="tech in project.technologies" 
+                    :key="tech" 
+                    class="lowercase inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300 ring-1 ring-inset ring-blue-500/30"
+                  >
+                    {{ tech }}
+                  </span>
+                </div>
+              </td>
+              <td class="py-4 pr-4 sm:pr-8 align-top text-sm text-muted hidden md:table-cell">{{ project.workplace }}</td>
+              <td class="py-4 align-top hidden lg:table-cell">
+                <div class="flex flex-wrap gap-1.5">
+                  <span 
+                    v-for="tech in project.technologies" 
+                    :key="tech" 
+                    class="lowercase inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300 ring-1 ring-inset ring-blue-500/30"
+                  >
+                    {{ tech }}
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </UPageSection>
   </UPage>
 </template>

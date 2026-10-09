@@ -1,0 +1,10 @@
+title: "Wahana"
+year: "2020"
+workplace: "Bos Ampuh"
+description: "A parking management system featuring a web-based admin panel and a mobile application for logging."
+technologies:
+  - "PHP"
+  - "CodeIgniter"
+  - "Vue.js"
+  - "Flutter"
+  - "Dart"
