@@ -19,7 +19,9 @@ useHead({
 
 useSeoMeta({
   titleTemplate: '%s',
-  twitterCard: 'summary_large_image'
+  twitterCard: 'summary_large_image',
+  ogImage: '/meta-image.jpg',
+  twitterImage: '/meta-image.jpg'
 })
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
