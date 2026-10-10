@@ -35,6 +35,11 @@ export default defineAppConfig({
       'to': 'https://github.com/rzwibowo',
       'target': '_blank',
       'aria-label': 'GitHub'
+    }, {
+      'icon': 'i-heroicons-envelope',
+      'to': 'mailto:rizkiadigunow@gmail.com',
+      'target': '_blank',
+      'aria-label': 'Email'
     }]
   }
 })

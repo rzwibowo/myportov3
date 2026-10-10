@@ -9,6 +9,8 @@ const { footer } = useAppConfig()
   >
     <template #left>
       {{ footer.credits }}
+      <span class="mx-1">&middot;</span>
+      <NuxtLink to="https://v1-wibowo-dev.web.app" target="_blank" class="hover:underline">v1</NuxtLink>
     </template>
 
     <template #right>

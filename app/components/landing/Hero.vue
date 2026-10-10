@@ -26,6 +26,7 @@ useHead({
       <div class="absolute top-full left-0 w-full pointer-events-auto flex gap-4 mt-4 max-[36rem]:justify-center">
         <UButton icon="i-simple-icons-linkedin" to="https://linkedin.com/in/rzwibowo" target="_blank" color="neutral" variant="ghost" size="xl" aria-label="LinkedIn" />
         <UButton icon="i-simple-icons-github" to="https://github.com/rzwibowo" target="_blank" color="neutral" variant="ghost" size="xl" aria-label="GitHub" />
+        <UButton icon="i-heroicons-envelope" to="mailto:rizkiadigunow@gmail.com" target="_blank" color="neutral" variant="ghost" size="xl" aria-label="Email" />
       </div>
     </div>
 

@@ -30,7 +30,8 @@ export default defineNuxtConfig({
         '/'
       ],
       crawlLinks: true
-    }
+    },
+    preset: 'static'
   },
 
   eslint: {

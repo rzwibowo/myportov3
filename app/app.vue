@@ -18,7 +18,7 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Wibowo Portfolio',
+  titleTemplate: '%s',
   twitterCard: 'summary_large_image'
 })
 
